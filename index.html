@@ -1,11 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Voxchord</title>
-  <link rel="manifest" href="manifest.json">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VoxChord AI</title>
+
+  <!-- App Meta -->
+  <meta name="description" content="VoxChord AI – Discord Voice Channel Assistant">
+  <meta name="theme-color" content="#2563eb">
+
+  <!-- Icon -->
+  <link rel="icon" href="icon.png">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .app {
+      background: #020617;
+      border-radius: 18px;
+      padding: 24px;
+      width: 90%;
+      max-width: 420px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    p {
+      opacity: 0.8;
+      margin: 10px 0 20px;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      background: #2563eb;
+      color: white;
+    }
+
+    .btn.secondary {
+      background: #1e293b;
+    }
+
+    footer {
+      margin-top: 16px;
+      font-size: 12px;
+      opacity: 0.5;
+    }
+  </style>
 </head>
 <body>
-  <h1>🎤 Voxchord</h1>
-  <p>Your voice community app</p>
+  <div class="app">
+    <h1>🎙 VoxChord AI</h1>
+    <p>Discord Voice Channel Assistant</p>
+
+    <button class="btn" onclick="joinDiscord()">Join Discord</button>
+    <button class="btn secondary" onclick="startDemo()">AI Voice Demo</button>
+
+    <footer>
+      VoxChord © 2026
+    </footer>
+  </div>
+
+  <script>
+    function joinDiscord() {
+      window.open("https://discord.gg/YOUR_INVITE", "_blank");
+    }
+
+    function startDemo() {
+      alert("AI voice features coming soon!");
+    }
+  </script>
 </body>
 </html>
